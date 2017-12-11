@@ -1,0 +1,119 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.img-from-api:hover{
+  box-shadow: 0px 0px 150px #000000;
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.5);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.5);   
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.5);
+  transition: all 200ms ease-in;
+  transform: scale(1.1);
+}
+
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+
+.one {
+  height: 250px;
+  width: 250px;
+ 
+}
+.two { 
+  margin-top: 20px;
+  height: 250px;
+  width: 250px; 
+
+}
+.three {
+  height: 250px;
+  width: 250px;
+}
+.four{
+  margin-top: 20px;
+  height: 250px;
+  width: 250px;
+}
+.five{
+  height: 250px;
+  width: 250px;
+}
+.six{
+  margin-top: 20px;
+  height: 250px;
+  width: 250px;
+}
+.main-one{
+  margin-top: 20px;
+  height: 250px;
+  width: 250px;
+}
+.main-two{
+  margin-top: 20px;
+  height: 250px;
+  width: 250px;
+}
+.main-three{
+  margin-top: 20px;
+  height: 250px;
+  width: 250px;
+}
+.main-four{
+  margin-top: 20px;
+  height: 250px;
+  width: 250px;
+}
+.main-five{
+  margin-top: 20px;
+  height: 250px;
+  width: 250px;
+}
+.main-six{
+  margin-top: 20px;
+  height: 250px;
+  width: 250px;
+}
+.main-seven{
+  margin-top: 20px;
+  height: 250px;
+  width: 250px;
+}
+.main-eight{
+  margin-top: 20px;
+  height: 250px;
+  width: 250px;
+}
+.main-nine{
+  margin-top: 20px;
+  height: 250px;
+  width: 250px;
+}
