@@ -1,4 +1,4 @@
-# Create a Gallery App with React :star:
+# Create a Gallery App with React:star:
 In this project, you'll build an image gallery using React and the Flickr API. After creating the project with create-react-app, you will build the gallery components, write the CSS and set up routing.
 
 Requirements:
