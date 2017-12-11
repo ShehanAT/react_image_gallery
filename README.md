@@ -3,8 +3,7 @@ In this project, you'll build an image gallery using React and the Flickr API. A
 
 `npm install` to install dependencies.
 
-Add a `config.js` file to `src` folder 
-
+Add a `config.js` file to `src` folder. 
 Format for config.js:
 
 `const apiKey = "YOUR-API-KEY"; 
