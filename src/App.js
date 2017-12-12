@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
-import Header from './Header.js';
-import Search from './Search';
-import axios from 'axios';
-import apikey from './config.js';//importing config.js from src folder
+import Header from './Header.js';//importing header component
+import Search from './Search';//importing search images component
 import 'bootstrap/dist/css/bootstrap.css';
 import Cats from './Cats';//importing default images component 
 import Dogs from './Dogs';//importing default images component 
@@ -18,16 +16,6 @@ import UrlSearch from './UrlSearch';//importing url search component
 
 // App components
 export default class App extends Component {
-  constructor (){
-    super();
-    this.state = {//state that controls the button toggle 
-        isLoading: true,
-        CatButton: false,
-        DogButton: false,
-        SunsetButton: false
-    }
-}
-
 
   render() {//rendering the components
     
