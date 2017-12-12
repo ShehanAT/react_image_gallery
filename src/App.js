@@ -5,14 +5,14 @@ import './App.css';
 import Header from './Header.js';
 import Search from './Search';
 import axios from 'axios';
-import apikey from './config.js';
+import apikey from './config.js';//importing config.js from src folder
 import 'bootstrap/dist/css/bootstrap.css';
-import Cats from './Cats';
-import Dogs from './Dogs';
-import Sunsets from './Sunsets';
-import MainContent from './MainContent';
-import error from './error';
-import UrlSearch from './UrlSearch';
+import Cats from './Cats';//importing default images component 
+import Dogs from './Dogs';//importing default images component 
+import Sunsets from './Sunsets';//importing default images component 
+import MainContent from './MainContent';//importing main content component 
+import error from './error';//importing error component
+import UrlSearch from './UrlSearch';//importing url search component
 
 
 
@@ -20,7 +20,7 @@ import UrlSearch from './UrlSearch';
 export default class App extends Component {
   constructor (){
     super();
-    this.state = {
+    this.state = {//state that controls the button toggle 
         isLoading: true,
         CatButton: false,
         DogButton: false,
@@ -29,9 +29,8 @@ export default class App extends Component {
 }
 
 
-  render() {
+  render() {//rendering the components
     
-    //console.log(`https://farm${image.farm}.staticflickr.com/${image.server}/${image.id}_${image.secret}.jpg`)
     return (
     <BrowserRouter>
       <div className="App">   
