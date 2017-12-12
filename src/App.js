@@ -27,59 +27,6 @@ export default class App extends Component {
         SunsetButton: false
     }
 }
-componentWillMount(){
- 
-}
-  handleCatPage = () => {
-    this.setState({
-      CatButton: true,
-      DogButton: false,
-      SunsetButton: false
-    })
-
-  }
-  handleDogPage = () => {
-    this.setState({
-      CatButton: false,
-      DogButton: true,
-      SunsetButton: false
-    })
-  }
-  handleSunsetPage = () => {
-    this.setState({
-      CatButton: false,
-      DogButton: false,
-      SunsetButton: true
-    })
-  }
-  handleCatPhotos = x => {
-    axios({
-      method: 'GET',
-      url: 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key='+apikey+'&tags=cats&per_page=10&page=1&format=json&nojsoncallback=1',
-      header: {
-        'Access-Control-Allow-Origin': 'http://localhost:3000'| '*'
-      }
-    })
-    .then((response) => {
-      var counter = 0;
-      for ( var i = 0 ; i < 10 ; i++){
-        this.setState({ 
-          catArr : [
-            {
-              url: `https://farm${response.data.photos.photo[i]['farm']}.staticflickr.com/${response.data.photos.photo[i]['server']}/${response.data.photos.photo[i]['id']}_${response.data.photos.photo[i]['secret']}.jpg`,
-              id: counter
-            },
-            ...this.state.catArr
-          ]
-          
-         });
-         counter++;
-      }
-    })
-    .catch((error) => {
-      console.log(error);
-    })
-  }
 
 
   render() {
