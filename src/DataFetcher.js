@@ -34,15 +34,13 @@ class DataFetcher extends Component {
         this.handlePhotos(this.props.subject);
 
     }
-    // componentDidUpdate(Props){
-    //     var counter = 0;
-    //     if (this.props.subject !== undefined && counter == 0){
-    //         counter++
-    //         console.log(counter);
-    //         this.handlePhotos(this.props.subject)
-    //         //nthis.handlePhotos(this.props.subject);
-    //     }
-    // }
+     componentWillReceiveProps(Props){
+         console.log(Props.subject);
+         console.log(this.props.subject)
+        if (this.props.subject !== Props.subject ){
+            this.handlePhotos(Props.subject)
+        }
+    }
   
     
    
