@@ -34,9 +34,16 @@ class DataFetcher extends Component {
         this.handlePhotos(this.props.subject);
 
     }
-    handleSearchTerm(req, res, next){
-       console.log(req);
-    }
+    // componentDidUpdate(Props){
+    //     var counter = 0;
+    //     if (this.props.subject !== undefined && counter == 0){
+    //         counter++
+    //         console.log(counter);
+    //         this.handlePhotos(this.props.subject)
+    //         //nthis.handlePhotos(this.props.subject);
+    //     }
+    // }
+  
     
    
     handleShowImages = (props) =>{
@@ -60,7 +67,6 @@ class DataFetcher extends Component {
         })
     }
       handlePhotos = searchTerm => {
-        console.log(searchTerm);
         var pageNum = Math.floor(Math.random() * 20);
         axios({ 
           method: 'GET',
@@ -84,7 +90,6 @@ class DataFetcher extends Component {
              counter++;
           }
         
-           console.log(this.state.img);
            this.handleShowImages();
       })
       .catch((err) => {
