@@ -34,7 +34,7 @@ class DataFetcher extends Component {
         this.handlePhotos(this.props.subject);
 
     }
-    // componentDidUpdate(Props){
+    // componentDidUpdate(Props){ this update method causes infinte api calls to flickr
     //     var counter = 0;
     //     if (this.props.subject !== undefined && counter == 0){
     //         counter++
