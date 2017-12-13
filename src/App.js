@@ -5,12 +5,12 @@ import './App.css';
 import Header from './Header.js';
 import Search from './Search';
 import 'bootstrap/dist/css/bootstrap.css';
-import Cats from './Cats';
-import Dogs from './Dogs';
-import Sunsets from './Sunsets';
-import MainContent from './MainContent';
-import error from './error';
-import UrlSearch from './UrlSearch';
+import Cats from './Cats';//importing default images component 
+import Dogs from './Dogs';//importing default images component 
+import Sunsets from './Sunsets';//importing default images component 
+import MainContent from './MainContent';//importing main content component 
+import error from './error';//importing error component
+import UrlSearch from './UrlSearch';//importing url search component
 
 
 
