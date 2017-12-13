@@ -27,9 +27,6 @@ export default class Search extends Component {
         this.setState({
             queryTerm: this.state.searchTerm
         })
-       // ReactDOM.render(<DataFetcher subject={this.query.value}/>, document.getElementById('results'))
-        //need a way to dynamically render data fetching component AFTER form submisson
-        //this code throws 
         e.currentTarget.reset();
         
     }

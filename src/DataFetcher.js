@@ -34,6 +34,7 @@ class DataFetcher extends Component {
         this.handlePhotos(this.props.subject);
 
     }
+<<<<<<< HEAD
      componentWillReceiveProps(Props){
          console.log(Props.subject);
          console.log(this.props.subject)
@@ -41,6 +42,17 @@ class DataFetcher extends Component {
             this.handlePhotos(Props.subject)
         }
     }
+=======
+    // componentDidUpdate(Props){ this update method causes infinte api calls to flickr
+    //     var counter = 0;
+    //     if (this.props.subject !== undefined && counter == 0){
+    //         counter++
+    //         console.log(counter);
+    //         this.handlePhotos(this.props.subject)
+    //         //nthis.handlePhotos(this.props.subject);
+    //     }
+    // }
+>>>>>>> 91f1521cc9b30becc716e615ee8e299aa0b8a901
   
     
    
