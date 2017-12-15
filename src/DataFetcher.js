@@ -6,7 +6,7 @@ import Loading from 'react-loading-animation';
 import 'bootstrap/dist/css/bootstrap.css';
 
 import NoPics from './NoPics';
-
+//component that makes api calls to flickr
 class DataFetcher extends Component {
     constructor (){
         super();
@@ -26,16 +26,16 @@ class DataFetcher extends Component {
             noPic: false
         }
     }
-    componentDidMount(Props){
+    componentDidMount(Props){//enables use with Cats, Dogs and Sunsets
         this.handlePhotos(this.props.subject);
 
     }
-     componentWillReceiveProps(Props){
+     componentWillReceiveProps(Props){//function that enables the use of Search and UrlSearch components with DataFetcher
         if (this.props.subject !== Props.subject ){
             this.handlePhotos(Props.subject)
         }
     }
-    handleShowImages = (props) =>{
+    handleShowImages = (props) =>{//assigning the image holders to the image urls
         this.setState({
             img1: this.state.img[0].url,
             img2: this.state.img[1].url,
@@ -49,13 +49,13 @@ class DataFetcher extends Component {
         })
         this.handleEraseResults();
     }
-    handleEraseResults = () => {
+    handleEraseResults = () => {//function that erases results of previous search 
         this.setState({
             img: [],
             isLoading: false
         })
     }
-      handlePhotos = searchTerm => {
+      handlePhotos = searchTerm => {//function that get the required photos from the flickr api 
         this.setState({
             isLoading: true
         })
