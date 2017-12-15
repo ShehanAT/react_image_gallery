@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import apikey from './config.js';
 import { NavLink } from 'react-router-dom';
-import Loading from 'react-loading-animation';
 import DataFetcher from './DataFetcher.js';
 
 class Dogs extends Component {

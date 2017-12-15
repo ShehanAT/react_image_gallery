@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import apikey from './config.js';
-import SearchForm from './components/SearchForm';
-import NoPics from './NoPics';
-import Loading from 'react-loading-animation';
 import DataFetcher from './DataFetcher.js';
-import ReactDOM from 'react-dom';
+
 
 
 export default class Search extends Component {
