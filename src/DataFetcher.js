@@ -14,15 +14,6 @@ class DataFetcher extends Component {
             img: [],
             searchString: '',
             isLoading: true,
-            img1: '',
-            img2: '',
-            img3: '',
-            img4: '',
-            img5: '',
-            img6: '',
-            img7: '',
-            img8: '',
-            img9: '',
             noPic: false
         }
     }
@@ -36,17 +27,6 @@ class DataFetcher extends Component {
         }
     }
     handleShowImages = (props) =>{//assigning the image holders to the image urls
-        this.setState({
-            img1: this.state.img[0].url,
-            img2: this.state.img[1].url,
-            img3: this.state.img[2].url,
-            img4: this.state.img[3].url,
-            img5: this.state.img[4].url,
-            img6: this.state.img[5].url,
-            img7: this.state.img[6].url,
-            img8: this.state.img[7].url,
-            img9: this.state.img[8].url
-        })
         this.handleEraseResults();
     }
     handleEraseResults = () => {//function that erases results of previous search 
