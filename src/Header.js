@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Header = props => 
-        <header className="App-header">
-        <img src={props.logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">Welcome to React Image Gallery</h1>
+        <header className="header">
+
         </header>
 
 Header.propTypes = {

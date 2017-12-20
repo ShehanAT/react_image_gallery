@@ -29,7 +29,7 @@ export default class App extends Component {
             <Route exact path='/sunsets' component={Sunsets}/>
             <Route exact path='/search' component={Search}/>
           
-            <Route path='/:term'component={UrlSearch}/>
+            <Route path='/search/:term'component={UrlSearch}/>
             <Route component={error}/>
           </Switch>
        </div>

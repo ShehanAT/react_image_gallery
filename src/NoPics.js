@@ -5,7 +5,7 @@ const NoPics = props => {
     return (
         <li className='no-pics'>
         <i className='material-icons icon-gif'></i>
-        <h1>No Pictures Found Or Invalid Url </h1>
+        <h1>No Pictures Found </h1>
     </li>
     )
    
