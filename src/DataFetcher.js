@@ -7,12 +7,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import NoPics from './NoPics';
 //component that makes api calls to flickr
-const Images = function(props){
-    const {src, id} = props;
-    return (
-         <img src={src} alt='pictures from flickr' key={id} className='img-from-api main-one'/>
-    )
-}
 
 
 class DataFetcher extends Component {
@@ -50,7 +44,7 @@ class DataFetcher extends Component {
         var pageNum = Math.floor(Math.random() * 20);
         axios({ 
           method: 'GET',
-          url: 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key='+apikey+'&tags='+searchTerm+'&per_page=9&page='+pageNum+'&format=json&nojsoncallback=1',
+          url: 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key='+apikey+'&tags='+searchTerm+'&per_page=16&page='+pageNum+'&format=json&nojsoncallback=1',
           header: {
             'Access-Control-Allow-Origin': 'http://localhost:3000'| '*'
           }
@@ -73,7 +67,7 @@ class DataFetcher extends Component {
           this.setState({
             img: []
            })
-          for ( var i = 0 ; i < 9 ; i++){
+          for ( var i = 0 ; i < 16 ; i++){
             this.setState({ 
               img : [
                 {
@@ -94,28 +88,24 @@ class DataFetcher extends Component {
 }
 render(){
     return (
-        <div className="photo-area">  
-        <div className='row'>
-    
+        <div className="photo-container">
+        <h2>Results</h2>  
+        <ul>
         {(this.state.isLoading) ? <Loading/>: 
         this.state.img.map((player, index)=>{
             
                 return(
-                    <div className='col-md-4'>
-                    <Images
-                        src={player.url}
-                        key={index}
-                    />
-                    </div>
+                    <li>
+                        <img src={player.url} alt='' key={index}/>
+                    </li>
+                    
                 )
             
            
         })
         }
+        </ul>
         {(this.state.noPic) ? <NoPics/> : null}
-        
-        
-       </div>
        </div>
     )}
 }

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
-import logo from './logo.svg';
 import './App.css';
 import Header from './Header.js';
 
@@ -19,9 +18,8 @@ export default class App extends Component {
   render() {
     return (
     <BrowserRouter>
-      <div className="App">   
-        <Header 
-          logo={logo}/>
+      <div className="container">   
+        <Header/>
           
           <Switch>
             <Route exact path='/' component={MainContent}/>

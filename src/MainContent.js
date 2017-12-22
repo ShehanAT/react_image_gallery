@@ -9,14 +9,15 @@ import Search from './Search';
 // App components
 const MainContent = props => {
     return (
-    
-        <div className="MainContent-area"> 
+        <body>
+        <div className="container"> 
             <NavLink to='/cats' className="btn btn-primary">Cats</NavLink>
             <NavLink to='/dogs' className="btn btn-primary">Dogs</NavLink>
             <NavLink to='/sunsets' className="btn btn-primary">Sunsets</NavLink> 
             <Search subject='Cats'/>
            
         </div>
+        </body>
      
     )
 }
