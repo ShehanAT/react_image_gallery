@@ -10,12 +10,7 @@ class Cats extends React.Component {
             searched: false
         }
     }
-    componentDidUpdate(Props){
-        console.log('passing');
-        this.setState({
-            searched: true
-        })
-    }
+    
     render(){
         return (
             <div>
