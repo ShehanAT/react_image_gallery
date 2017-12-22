@@ -4,13 +4,6 @@ import Search from './Search.js';
 
 
 class Cats extends React.Component {
-    constructor (){
-        super();
-        this.state = {
-            searched: false
-        }
-    }
-    
     render(){
         return (
             <div>
