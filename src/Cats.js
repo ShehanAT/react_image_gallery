@@ -4,18 +4,6 @@ import Search from './Search.js';
 
 
 class Cats extends React.Component {
-    constructor (){
-        super();
-        this.state = {
-            searched: false
-        }
-    }
-    componentDidUpdate(Props){
-        console.log('passing');
-        this.setState({
-            searched: true
-        })
-    }
     render(){
         return (
             <div>
