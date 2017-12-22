@@ -3,21 +3,19 @@ import { NavLink} from 'react-router-dom';
 import './App.css';
 import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.css';
-
+import Search from './Search';
 
 
 // App components
 const MainContent = props => {
     return (
     
-        <div className="MainContent-area">  
-        
+        <div className="MainContent-area"> 
             <NavLink to='/cats' className="btn btn-primary">Cats</NavLink>
             <NavLink to='/dogs' className="btn btn-primary">Dogs</NavLink>
-            <NavLink to='/sunsets' className="btn btn-primary">Sunsets</NavLink>
-            <div className='search-page-toggle'>
-                <h3><a href='/search'>Click Here</a> to search for pictures</h3>
-            </div>
+            <NavLink to='/sunsets' className="btn btn-primary">Sunsets</NavLink> 
+            <Search subject='Cats'/>
+           
         </div>
      
     )

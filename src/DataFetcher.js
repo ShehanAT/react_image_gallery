@@ -7,6 +7,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 import NoPics from './NoPics';
 //component that makes api calls to flickr
+const Images = function(props){
+    const {src, id} = props;
+    return (
+         <img src={src} alt='pictures from flickr' key={id} className='img-from-api main-one'/>
+    )
+}
+
+
 class DataFetcher extends Component {
     constructor (){
         super();
@@ -14,15 +22,6 @@ class DataFetcher extends Component {
             img: [],
             searchString: '',
             isLoading: true,
-            img1: '',
-            img2: '',
-            img3: '',
-            img4: '',
-            img5: '',
-            img6: '',
-            img7: '',
-            img8: '',
-            img9: '',
             noPic: false
         }
     }
@@ -37,22 +36,12 @@ class DataFetcher extends Component {
     }
     handleShowImages = (props) =>{//assigning the image holders to the image urls
         this.setState({
-            img1: this.state.img[0].url,
-            img2: this.state.img[1].url,
-            img3: this.state.img[2].url,
-            img4: this.state.img[3].url,
-            img5: this.state.img[4].url,
-            img6: this.state.img[5].url,
-            img7: this.state.img[6].url,
-            img8: this.state.img[7].url,
-            img9: this.state.img[8].url
+            isLoading: false
         })
         this.handleEraseResults();
     }
     handleEraseResults = () => {//function that erases results of previous search 
-        this.setState({
-            isLoading: false
-        })
+    
     }
       handlePhotos = searchTerm => {//function that get the required photos from the flickr api 
         this.setState({
@@ -81,6 +70,9 @@ class DataFetcher extends Component {
                   isLoading: false
               })
           }
+          this.setState({
+            img: []
+           })
           for ( var i = 0 ; i < 9 ; i++){
             this.setState({ 
               img : [
@@ -104,16 +96,32 @@ render(){
     return (
         <div className="photo-area">  
         <div className='row'>
-        {(this.state.isLoading) ? <Loading/> : this.state.img.map(function(player){
-           return <img src={player.url} alt='pictures from flickr' key={player.id}className='img-from-api main-one'/>
-       })}
+    
+        {(this.state.isLoading) ? <Loading/>: 
+        this.state.img.map((player, index)=>{
+            
+                return(
+                    <div className='col-md-4'>
+                    <Images
+                        src={player.url}
+                        key={index}
+                    />
+                    </div>
+                )
+            
+           
+        })
+        }
+        {(this.state.noPic) ? <NoPics/> : null}
+        
+        
        </div>
-       {
-           (this.state.noPic) ?
-           <NoPics/>: ""
-       }
        </div>
     )}
 }
-
+/*
+{(this.state.isLoading) ? <Loading/> : this.state.img.map(function(player){
+           return <img src={player.url} alt='pictures from flickr' key={player.id} className='img-from-api main-one'/>
+       })}
+*/
 export default DataFetcher;

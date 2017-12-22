@@ -13,7 +13,11 @@ export default class Search extends Component {
             queryTerm: ''
         }
     }
-    
+    componentDidMount(props){
+        this.setState({
+            searchTerm: this.props.subject
+        })
+        }
     handleSubmit = e => {
         e.preventDefault();
         this.setState({
@@ -35,11 +39,6 @@ export default class Search extends Component {
             ref={(input) => this.query = input}
             />
             <button className="btn btn-primary" id="search-btn" type='submit'>Search</button>
-            <h3 className="App-intro">
-              To get started, type in a search term and click to Search.
-            </h3>
-            
-            <div className='main-content-toggle'><h3><a href='/'>Click Here</a> to go back to the main page</h3></div>
             <div className='results' id='results'>
              
              { 

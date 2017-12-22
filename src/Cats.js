@@ -1,16 +1,29 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import DataFetcher from './DataFetcher';
+import Search from './Search.js';
+
 
 class Cats extends React.Component {
+    constructor (){
+        super();
+        this.state = {
+            searched: false
+        }
+    }
+    componentDidUpdate(Props){
+        console.log('passing');
+        this.setState({
+            searched: true
+        })
+    }
     render(){
         return (
             <div>
             <NavLink to='/cats' className="btn btn-primary">Cats</NavLink>
             <NavLink to='/dogs' className="btn btn-primary">Dogs</NavLink>
             <NavLink to='/sunsets' className="btn btn-primary">Sunsets</NavLink>
-            <h3><a href='/search'>Click Here</a> to search for pictures</h3>
-            <DataFetcher subject='Cats'/>
+            <Search subject='Cats'/>
+            
             </div>
         )
     }       

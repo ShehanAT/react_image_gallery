@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import Header from './Header.js';
-import Search from './Search';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import Cats from './Cats';//importing default images component 
 import Dogs from './Dogs';//importing default images component 
@@ -22,13 +22,12 @@ export default class App extends Component {
       <div className="App">   
         <Header 
           logo={logo}/>
+          
           <Switch>
             <Route exact path='/' component={MainContent}/>
             <Route exact path='/cats' component={Cats}/>
             <Route exact path='/dogs' component={Dogs}/>
             <Route exact path='/sunsets' component={Sunsets}/>
-            <Route exact path='/search' component={Search}/>
-          
             <Route path='/search/:term'component={UrlSearch}/>
             <Route component={error}/>
           </Switch>
