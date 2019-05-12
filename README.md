@@ -18,3 +18,4 @@ Requirements:
 * Use React Router to set up routes for each navigation link in the directory app.
 * Use the Fetch API or a tool like Axios to fetch data from the Flickr API.
 * Do all data fetching from a container component that passes the data down to presentational components responsible for    displaying images
+ 
